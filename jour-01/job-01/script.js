@@ -1,32 +1,14 @@
-const text = document.querySelector("#text");
+function myUpperCase(string) {
+    const letters = { a: "A", b: "B", c: "C", d: "D", e: "E", f: "F", g: "G", h: "H", i: "I", j: "J", k: "K", l: "L", m: "M", n: "N", o: "O", p: "P", q: "Q", r: "R", s: "S", t: "T", u: "U", v: "V", w: "W", x: "X", y: "Y", z: "Z", };
 
-const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const lower = "abcdefghijklmnopqrstuvwxyz";
-
-function myUpperCase(str) {
-  let result = "";
-  let i = 0;
-  while (str[i]) {
-    let char = str[i];
-    let isLowercase = false;
-    let j = 0;
-
-    while (lower[j]) {
-      if (char === lower[j]) {
-        result += upper[j];
-        isLowercase = true;
-        break;
-      }
-      j++;
-    }
-
-    if (!isLowercase) {
-      result += char;
-    }
-
-    i++;
-  }
-
-  return result;
+    let result = "";
+    
+    for (const char of string) {
+        if (letters[char]) {
+            result += letters[char];
+        } else {
+            result += char;
+        }
+    } return result;
 }
 myUpperCase("Hello World");
