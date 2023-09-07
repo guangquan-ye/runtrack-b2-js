@@ -16,6 +16,6 @@ function myIsInString(haystack, needle) {
     return false;
 }
 
-console.log(myIsInString("Hello World", "llo"));
+myIsInString("Hello World", "llo");
 
 
